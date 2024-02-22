@@ -57,3 +57,10 @@ select * from store where id < 10;
 
 select sum(price), sum(quantity) from store;
 
+select item_name, price,
+case 
+when price > 10 
+then "costly"
+else "cheap"
+end as Nature
+from store;

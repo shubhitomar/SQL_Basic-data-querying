@@ -95,4 +95,37 @@ select * from artists where name like "%R%";
 
 select * from artists where genre ="Pop";
 
+#having clause
+
+create table books (
+id integer primary key auto_increment,
+author text,
+title text,
+words integer);
+
+insert into books (author, title, words)
+values("J.K. Rowling", "Harr Potter and the Philosopher's stone", 79944),
+("J.K. Rowling", "Harry Potter and the chamber of secrets", 85141),
+("J.K. Rowling", "Harry Potter and the prisoner or Azbakan",107253),
+("J.K.Rowling","Harry Potter and the Goblet of Fire", 190637),
+("J.K. Rowling", "Harry Potter and the Order of the Phoenix", 257045),
+("J.K. Rowling", "Harry Potter and the Half-Blood Prince", 168923),
+("J.K.Rowling", "Harry Potter and the Deathly Hallows", 197651),
+
+("Stephenie Meyer", "Twilight", 118501),
+("Stephenie Meyer", "New Moon", 132807),
+("Stephenie Meyer", "Eclipse",147930),
+("Stephenie Meyer", "Breaking Dawn", 192196),
+
+("J.R.R. Tolkien", "The Hobbit", 95022),
+("J.R.R. Tolkien", "Fellowship of the Ring", 177227),
+("J.R.R. Tolkien", "Two Towers", 143436),
+("J.R.R. Tolkien", "Return of the King", 134462);
+
+
+
+select * from artists where name like "%R%";
+
+select * from artists where genre ="Pop";
+
 

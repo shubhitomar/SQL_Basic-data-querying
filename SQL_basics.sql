@@ -64,3 +64,35 @@ then "costly"
 else "cheap"
 end as Nature
 from store;
+
+#in and sub-query
+
+create table artists(
+id integer primary key auto_increment,
+name text,
+country text,
+genre text);
+
+insert into artists( name, country, genre)
+values( "Taylor Swift", "US", "Pop"),
+("Led Zeppelin", "US", "Hard Rock"),
+("ABBA", "Sweden", "Disco"),
+("Queen", "UK", "Rock"),
+("Celine Dion", "Canada", "Pop"),
+("Meatloaf", "US", "Hard Rock"),
+("Garth Brooks", "US", "Country"),
+("Shania Twain", "Canada", "Country"),
+("Rihanna","US", "Pop"),
+("Guns n Roses", "US", "Hard Rock"),
+("Gloria Estefan","US", "Pop"),
+("Bob Marley", "Jamaica", "Reggae");
+
+select * from artists;
+
+select * from artists where country in ("us", "Jamaica");
+
+select * from artists where name like "%R%";
+
+select * from artists where genre ="Pop";
+
+

@@ -104,10 +104,10 @@ title text,
 words integer);
 
 insert into books (author, title, words)
-values("J.K. Rowling", "Harr Potter and the Philosopher's stone", 79944),
-("J.K. Rowling", "Harry Potter and the chamber of secrets", 85141),
+values("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 79944),
+("J.K. Rowling", "Harry Potter and the Chamber of secrets", 85141),
 ("J.K. Rowling", "Harry Potter and the prisoner or Azbakan",107253),
-("J.K.Rowling","Harry Potter and the Goblet of Fire", 190637),
+("J.K.Rowling"," Harry Potter and the Goblet of Fire", 190637),
 ("J.K. Rowling", "Harry Potter and the Order of the Phoenix", 257045),
 ("J.K. Rowling", "Harry Potter and the Half-Blood Prince", 168923),
 ("J.K.Rowling", "Harry Potter and the Deathly Hallows", 197651),
@@ -123,9 +123,29 @@ values("J.K. Rowling", "Harr Potter and the Philosopher's stone", 79944),
 ("J.R.R. Tolkien", "Return of the King", 134462);
 
 
+select * from books;
 
-select * from artists where name like "%R%";
+select author,title from books where title like "harry%";
 
-select * from artists where genre ="Pop";
+select  sum(words) from books;
+
+select sum(words) from books;
+
+select sum(words) as total_words from books;
+
+select author,sum(words) as total_words from books
+group by author
+having total_words >1000;
+
+select author, avg(words) as avg_words from books
+group by author
+having avg_words >1500;
+
+
+
+
+
+
+
 
 

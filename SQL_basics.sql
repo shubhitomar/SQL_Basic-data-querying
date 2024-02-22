@@ -141,7 +141,35 @@ select author, avg(words) as avg_words from books
 group by author
 having avg_words >1500;
 
+#case statement
 
+create table student(
+id integer primary key auto_increment,
+name text,
+grade integer,
+fraction_completed real);
+
+INSERT INTO student (name, grade, fraction_completed)
+    VALUES ("Winston", 90, 0.805),
+     ("Winnefer", 95, 0.901),
+     ("Winsteen", 85, 0.906),
+     ("Wincifer", 66, 0.7054),
+     ("Winster", 76, 0.5013),
+     ("Winstonia", 82, 0.9045);
+     
+     select name, grade, round(fraction_completed *100) as percentage_completed from student;
+     
+     select count(*) as 'number of students',
+     case
+     when round(fraction_completed * 100)> 90 then "A"
+     when round(fraction_completed * 100) >80 then "B"
+     when round(fraction_completed * 100) > 70 then "C"
+     else "F"
+     end as "letter_grade"
+     from student
+     group by letter_grade
+     order by letter_grade asc;
+    
 
 
 
